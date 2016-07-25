@@ -4,7 +4,11 @@
 library(edgeR)
 library(limma)
 
-# Voom transformation
+# Voom transformation + limma fit
+
+
+
+# TMM normalization + Voom transformation + limma fit
 voom_transform = function(counts, condition){
   dgecounts = edgeR::calcNormFactors(edgeR::DGEList(counts = counts, group = condition))
 
